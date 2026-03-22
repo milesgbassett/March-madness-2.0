@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>March Madness Bracket Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>March Madness Bracket Tracker</h1>
+    <div class="nav-tabs">
+      <button id="nav-bracket" class="active">Brackets</button>
+      <button id="nav-leaderboard">Leaderboard</button>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <select id="bracket-select"></select>
+    <button id="btn-new">+ New Bracket</button>
+    <button id="btn-actual" class="secondary">Actual Results</button>
+    <button id="btn-reset" class="secondary">Reset Picks</button>
+    <div class="spacer"></div>
+    <div id="score-display" class="score-display"></div>
+    <button id="btn-delete" class="danger">Delete</button>
+  </div>
+
+  <!-- Bracket View -->
+  <div id="view-bracket" class="view active">
+    <div id="bracket-area" class="bracket-container"></div>
+  </div>
+
+  <!-- Leaderboard View -->
+  <div id="view-leaderboard" class="view">
+    <div class="leaderboard">
+      <h2>Bracket Leaderboard</h2>
+      <div id="leaderboard-content"></div>
+    </div>
+  </div>
+
+  <!-- New Bracket Modal -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal">
+      <h3>Create New Bracket</h3>
+      <input id="modal-input" type="text" placeholder="Bracket name (e.g. My Upset Special)" maxlength="50">
+      <div class="modal-actions">
+        <button id="modal-cancel" class="cancel">Cancel</button>
+        <button id="modal-create" class="primary">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
